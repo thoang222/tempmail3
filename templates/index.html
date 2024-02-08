@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Runner</title>
+</head>
+<body>
+    <h1>Command Runner</h1>
+    <form method="POST">
+        <input type="text" name="command" placeholder="Enter command">
+        <button type="submit">Run Command</button>
+    </form>
+    {% if output %}
+    <h2>Output:</h2>
+    <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
