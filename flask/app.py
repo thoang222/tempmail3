@@ -37,6 +37,17 @@ def read_file():
             return f"File '{file_path}'not have"
     except Exception as e:
         return f"Error: {e}"
-
+@app.route('/mail', methods=['GET'])
+def read_file():
+    file_path = '/tmp/tmpmail/tmpmail.html'
+    try:
+        if os.path.isfile(file_path):
+            with open(file_path, 'r') as file:
+                file_content = file.read()
+                return file_content
+        else:
+            return f"File '{file_path}'not have"
+    except Exception as e:
+        return f"Error: {e}"
 if __name__ == '__main__':
     app.run(debug=True)
