@@ -38,7 +38,7 @@ def read_file():
     except Exception as e:
         return f"Error: {e}"
 @app.route('/mail', methods=['GET'])
-def read_file():
+def read_file2():
     file_path = '/tmp/tmpmail/tmpmail.html'
     try:
         if os.path.isfile(file_path):
